@@ -11,3 +11,5 @@ Set-ADDefaultDomainPasswordPolicy -LockoutThreshold 10
 Set-ADDefaultDomainPasswordPolicy -LockoutDuration 00:30:00 
 Set-ADDefaultDomainPasswordPolicy -LockoutObservationWindow 00:30:00
 
+#Audit Policies
+auditpol /set /category:"Account Logon","Account Management","Detailed Tracking","DS Access","Logon/Logoff","Object Access","Policy Change","Privilege Use","System" /success:enable /failure:enable
